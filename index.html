@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP - ViaCEP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta CEP</h1>
+        <label for="cep">Digite o CEP:</label>
+        <input type="text" id="cep" maxlength="8" placeholder="Ex: 01001000" autocomplete="off" />
+        <button onclick="buscarCEP()">Buscar</button>
+
+        <div id="endereco">
+            <div class="result">
+                <p><strong>Rua:</strong> <span id="rua"></span></p>
+            </div>
+            <div class="result">
+                <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+            </div>
+            <div class="result">
+                <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+            </div>
+            <div class="result">
+                <p><strong>Estado:</strong> <span id="estado"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
