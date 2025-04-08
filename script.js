@@ -1,33 +1,35 @@
 function buscarCEP() {
     const cep = document.getElementById('cep').value;
-    const url = `https://viacep.com.br/ws/${cep}/json/`;
+    const erroEl = document.getElementById('erro');
+    const enderecoEl = document.getElementById('endereco');
 
-    // Verifica se o CEP tem 8 caracteres
-    if (cep.length !== 8) {
-        alert('CEP inválido!');
+    erroEl.textContent = '';
+    enderecoEl.style.display = 'none';
+
+    if (cep.length !== 8 || isNaN(cep)) {
+        erroEl.textContent = 'CEP inválido! Digite exatamente 8 números.';
         return;
     }
 
-    // Faz a requisição para a API ViaCEP
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data.erro) {
-                alert('CEP não encontrado!');
+                erroEl.textContent = 'CEP não encontrado!';
                 return;
             }
 
-            // Exibe as informações do endereço
             document.getElementById('rua').textContent = data.logradouro;
             document.getElementById('bairro').textContent = data.bairro;
             document.getElementById('cidade').textContent = data.localidade;
             document.getElementById('estado').textContent = data.uf;
 
-            // Exibe o bloco de endereço com animação
-            document.getElementById('endereco').style.display = 'block';
+            enderecoEl.style.display = 'block';
         })
         .catch(error => {
             console.error('Erro ao buscar CEP:', error);
-            alert('Erro ao buscar o CEP. Tente novamente.');
+            erroEl.textContent = 'Erro ao buscar o CEP. Tente novamente.';
         });
 }
