@@ -46,4 +46,3 @@ O projeto é composto por três arquivos principais:
 
 ## 📫 Contato  
 Feito com 💙 por Saymon  
-GitHub: [@SaymonTheDev7](https://github.com/SaymonTheDev7)
