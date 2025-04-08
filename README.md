@@ -43,6 +43,4 @@ O projeto é composto por três arquivos principais:
 - `script.js` – lógica de requisição e exibição de dados
 
 ---
-
-## 📫 Contato  
 Feito com 💙 por Saymon  
