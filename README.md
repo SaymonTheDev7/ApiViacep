@@ -10,7 +10,7 @@ Este é um projeto simples desenvolvido com **HTML**, **CSS** e **JavaScript pur
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript
 - API pública ViaCEP
 
 ## 🎯 Funcionalidades
