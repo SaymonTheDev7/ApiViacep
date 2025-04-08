@@ -47,6 +47,3 @@ O projeto é composto por três arquivos principais:
 ## 📫 Contato  
 Feito com 💙 por Saymon  
 GitHub: [@SaymonTheDev7](https://github.com/SaymonTheDev7)
-
-## 🖤 Licença  
-Este projeto está sob a licença MIT – sinta-se livre para usar, modificar e compartilhar!
